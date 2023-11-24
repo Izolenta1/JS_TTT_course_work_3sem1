@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Крестики-нолики</title>
+    <link rel="stylesheet" href="/css/game.css">
+    <script src="/js/game.js"></script>
+</head>
+<body>
+    <div class="game_code">Код игры - <span id="game_code"></span></div>
+    <main>
+        <h1>Ваша роль: <span id="role"></span></h1>
+        <h3 id="game_status">Ожидание оппонента</h3>
+        <div class="ttt_box_wrapper">
+            <div class="ttt_box_inactive" name="ttt_box" id="0_0" checked="false"></div>
+            <div class="ttt_box_inactive" name="ttt_box" id="0_1" checked="false"></div>
+            <div class="ttt_box_inactive" name="ttt_box" id="0_2" checked="false"></div>
+
+            <div class="ttt_box_inactive" name="ttt_box" id="1_0" checked="false"></div>
+            <div class="ttt_box_inactive" name="ttt_box" id="1_1" checked="false"></div>
+            <div class="ttt_box_inactive" name="ttt_box" id="1_2" checked="false"></div>
+
+            <div class="ttt_box_inactive" name="ttt_box" id="2_0" checked="false"></div>
+            <div class="ttt_box_inactive" name="ttt_box" id="2_1" checked="false"></div>
+            <div class="ttt_box_inactive" name="ttt_box" id="2_2" checked="false"></div>
+        </div>
+        <button class="start_game_btn" id="start_game_btn" disabled>Запустить</button>
+    </main>
+</body>
+</html>
