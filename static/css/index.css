@@ -18,6 +18,8 @@ body {
 }
 
 .main_win {
+    width: 260px;
+    height: 300px;
     display: flex;
     flex-direction: column;
     gap: 25px;
@@ -76,4 +78,68 @@ body {
 
 .join_btn {
     cursor: pointer;
+}
+
+.games_results_win {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.game_wins {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 5px;
+
+    color: #4a4e69;
+    font-family: 'Lucida Console', Monaco, monospace;
+    font-weight: bold;
+
+    background-color: #f2e9e4;
+    border-radius: 5px;
+}
+
+.game_wins_results {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    color: #22223b;
+}
+
+.table_wrapper {
+    height: 200px;
+    overflow-y: scroll;
+}
+
+.games_table {
+    width: 100%;
+
+    border-spacing: 4px;
+
+    background-color: #4a4e69;
+    border-radius: 5px;
+
+    color: #f2e9e4;
+    font-family: 'Lucida Console', Monaco, monospace;
+    text-align: center;
+}
+
+th, td {
+    border: 2px solid #22223b;
+
+    padding: 5px;
+}
+
+.table_wrapper::-webkit-scrollbar {
+    width: 4px;               
+}
+.table_wrapper::-webkit-scrollbar-track {
+    background: #22223b;        
+}
+.table_wrapper::-webkit-scrollbar-thumb {
+    background-color: #f2e9e4;
+    border-radius: 5px; 
 }

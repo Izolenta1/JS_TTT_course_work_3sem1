@@ -9,9 +9,39 @@
 <body>
     <div class="main_win">
         <div class="start_btn" id="start_btn">Начать игру</div>
+
         <div class="join_win">
             <input class="join_input" type="text" id="join_input">
             <div class="join_btn" id="join_btn">Присоединиться по коду</div>
+        </div>
+
+        <div class="games_results_win">
+            <div class="game_wins">
+                <span>Количество побед сторон</span>
+                <div class="game_wins_results">
+                    <div>X-<span id="x_wins">[0]</span></div>
+                    <div>O-<span id="o_wins">[0]</span></div>
+                    <div>D-<span id="draws">[0]</span></div>
+                </div>
+            </div>
+
+
+            <div class="table_wrapper">
+                <table class="games_table">
+                    <thead>
+                        <tr>
+                            <th colspan="2">История игр</th>
+                        </tr>
+                        <tr>
+                            <th>Дата игры</th>
+                            <th>Победившая сторона</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table_main">
+                        <!--Заполняется автоматически-->
+                    </tbody>
+                </table>
+            </div>              
         </div>
     </div>
 </body>

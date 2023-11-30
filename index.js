@@ -16,13 +16,14 @@ import { secondPlayerJoined } from "./service/tictactoeService.js";
 import { startGame } from "./service/tictactoeService.js";
 import { getGameInfo } from "./service/tictactoeService.js";
 
-//Класс с играми
+//Глобальный класс с играми
 let tictactoe = new TicTacToe()
 global.tictactoe = tictactoe
 
 //WebSocket сервер
 const wss = new WebSocketServer({ port: 8001 });
 
+//Методы websocket сервера
 wss.on('connection', function connection(ws, req) {
     ws.on('error', console.error);
 
@@ -97,6 +98,7 @@ wss.on('connection', function connection(ws, req) {
         ws.send(JSON.stringify(payload))
     }
 
+    //Принимаем сообщение от клиента
     ws.on('message', function message(event) {
         let message = JSON.parse(event.toString())
         switch (message.action) {
@@ -118,11 +120,12 @@ app.use(express.static(path.resolve(__dirname, "static")))
 app.use(routes)
 app.use(cookieParser())
 
-
+// Путь для главной страницы
 app.get("/", function(req, res) {
     return res.sendFile(__dirname + '/static/html/index.html');
 })
 
+// Путь для страницы с игрой
 app.get("/game/:game_id", function(req, res) {
     // Проверяем, есть ли места в игре
     let game = global.tictactoe.findGameById(req.params.game_id)
